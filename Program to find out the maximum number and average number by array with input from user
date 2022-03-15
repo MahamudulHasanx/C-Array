@@ -1,0 +1,28 @@
+#include<stdio.h>
+
+int main(){
+    int n, i, myNumbers[100];
+    printf("How many number you want:");
+    scanf("%d", &n);
+
+    printf("Please enter %d number:", n);
+    for(i=0; i<n; i++){
+        scanf("%d", &myNumbers[i]);
+    }
+
+    int max=myNumbers[0];
+    int sum=0;
+    float ave;
+    for(i=0; i<n; i++){
+        if (max < myNumbers[i]){
+            max = myNumbers[i];
+        }
+        sum += myNumbers[i];
+        ave = sum/n;
+    }
+    printf("Max Number is= %d\n", max);
+    printf("Summation is= %d\n", sum);
+    printf("Average is= %f", ave);
+
+    return 0;
+}
